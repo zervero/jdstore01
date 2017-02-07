@@ -16,3 +16,23 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+.navbar-default {
+    background-color: #FFFFFF;//背景颜色
+    border-color: #FFFFFF;//边框色
+    padding: 4px 0px; //内边距 上下 4px ，左右0px
+    margin-bottom: 0;//底部 margin 不撑开距离
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;//圆角为0
+    }
+}
+
+.navbar-default .navbar-brand {
+   color: #00ce96;//字体颜色
+   padding: 10px 15px;//上下10px,左右15px
+   line-height: 30px;//文字行高
+   font-size: 26px;
+}
