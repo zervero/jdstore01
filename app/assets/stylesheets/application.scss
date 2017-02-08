@@ -129,6 +129,7 @@
         border-radius: 0;//圆角为0
     }
 }
+
 .navbar-brand > img {
     display: inline-block;	//图片和链接文字显示在同一行
     margin-right: 10px; //图片和链接文字拉开一点距离
@@ -179,8 +180,18 @@
     //color: #212121;
 }
 
+#myCarousel{
+  padding-bottom: 0px;//内部的底部边距，这样按钮不会很靠近底部了
+  margin: 0 -15px 0px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+  border-radius: 0;//圆角为0
+}
 .carousel-inner img {
       width: 100%; /* Set width to 100% */
       margin: auto;
       min-height:200px;
 }
+@media (max-width: 600px) {
+    .carousel-caption {
+      display: none;
+    }
+  }
