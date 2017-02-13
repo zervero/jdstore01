@@ -10,6 +10,9 @@ class ProductsController < ApplicationController
   def add_to_cart
     @product = Product.find(params[:id])
     current_cart.add_product_to_cart(@product)
+    flash[:notice] = "Successfully add to cart"
     redirect_to :back
   end
+
+
 end
