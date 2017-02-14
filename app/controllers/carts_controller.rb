@@ -5,5 +5,9 @@ class CartsController < ApplicationController
     flash[:warning] = "Successfully clean cart"
     redirect_to carts_path
   end
-  
+
+  def checkout
+    @order = Order.new 
+  end
+
 end
