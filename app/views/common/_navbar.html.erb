@@ -14,9 +14,9 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li>
-                <%= link_to "#" do %>
-                购物车 <li class="fa fa-shopping-cart" ></li> ( <%= current_cart.products.count %> )
-                <% end %>
+                <a href="#" class="fa fa-shopping-cart">
+                购物车   ( <%= current_cart.products.count %> )
+              </a>
               </li>
               <% if !current_user %>
                   <li><a href="#" data-toggle="modal" data-target="#signup-modal">注册</a></li>
