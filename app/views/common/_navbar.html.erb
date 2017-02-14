@@ -15,19 +15,22 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <%= link_to carts_path do  %>
-                    购物车
-                    <i class="fa fa-shopping-cart"></i>
+
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <% if current_cart.products.count != 0 %>
                     (
                     <%= current_cart.products.count %>
                     )
                     <% end %>
+
+                    <% end %>
                 </li>
                 <% if !current_user %>
                 <li>
-                    <a href="#" data-toggle="modal" data-target="#signup-modal">注册</a>
+                    <a href="#" data-toggle="modal" data-target="#signup-modal">Sign up</a>
                 </li>
                 <li>
-                    <a href="#" data-toggle="modal" data-target="#login-modal">登入</a>
+                    <a href="#" data-toggle="modal" data-target="#login-modal">Log in</a>
                 </li>
             <% else %>
 
@@ -45,10 +48,10 @@
                         <li class="divider"></li>
                         <% end %>
 
-                        <li><%= link_to("我的订单", account_orders_path ) %></li>
+                        <li><%= link_to("My orders", account_orders_path ) %></li>
                         <li class="divider"></li>
                         <li>
-                            <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %>
+                            <%= link_to(content_tag(:i, 'Log out', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %>
                         </li>
                     </ul>
                 </li>
