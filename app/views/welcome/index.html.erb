@@ -1,7 +1,9 @@
 <div id="myCarousel" class="carousel slide">
     <ol class="carousel-indicators">
       <% @products.each do |product| %>
-        <li data-target="#myCarousel" data-slide-to="<%= product.id %>" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="<%= product.id %>" class="<% if product == @products.first %>
+              active
+            <% end %>"></li>
       <% end %>
     </ol>
     <div class="carousel-inner">
