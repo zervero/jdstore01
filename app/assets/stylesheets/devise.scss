@@ -1,5 +1,5 @@
 $btn-color: #fff;
-$btn-background: #49BCB5;
+$btn-background: #EE001D;
 $btn-background-hover: #00DBE9;
 
 .registration-block {
@@ -20,8 +20,8 @@ $btn-background-hover: #00DBE9;
   z-index: 3;
   margin-left: -215px;
   margin-top: 200px;
-  border: 5px solid #696767;
-  border-radius: 20px;
+  //border: 5px solid #696767;
+  //border-radius: 20px;
   a {
     color: #666666;
     font-weight: 400;
@@ -108,15 +108,27 @@ $btn-background-hover: #00DBE9;
       font-weight: 100;
     }
     .tip {
+      color: #4783ED;
       line-height: 26px;
       margin-top: 20px;
-      text-align: center;
+      //text-align: center;
       a {
         color: #4783ED;
         font-weight: 100;
         font-size: 1em;
       }
+
+      a:hover,
+      a:focus{
+        color: $btn-background;
+      }
     }
+
+    .tip:hover,
+    .tip:focus{
+      color: $btn-background;
+    }
+
   }
 }
 

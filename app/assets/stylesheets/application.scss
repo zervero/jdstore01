@@ -18,6 +18,10 @@
 @import "bootstrap";
 @import "font-awesome";
 
+.content-section {
+  min-height: 800px;
+  background-color: #efefef;
+}
 /****** navbar ******/
 .navbar-default {
 
@@ -75,7 +79,7 @@
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #FFFFFF;
-  background-color: rgba(238,0,29,1.0);
+  background-color: #EE001D;
 }
 
 .navbar-default .navbar-nav > .open > a,
@@ -101,3 +105,98 @@
       display: none;
     }
   }
+
+  // footer
+.footer-nav {
+  background: #201f21;
+  padding: 35px 0 20px 0;
+  .columns {
+    max-width: 980px;
+    margin: 0 auto;
+    .column {
+      width: 70px;
+      line-height: 200%;
+      margin: 0 0 10px 25px;
+    }
+    .colum-right {
+      float: right;
+      width: 200px;
+      li {
+        padding: 0;
+        display: block;
+        white-space: nowrap;
+      }
+      .icon-gamepad {
+        display: inline-block;
+        height: 50px;
+        font-size: 0;
+        margin-right: 50px;
+      }
+      h3 {
+        color: #fff;
+        opacity: .5;
+        margin-top: 0;
+        font-size: 24px;
+      }
+      h4 {
+        .fa {
+          font-size: 18px;
+          margin-right: 10px;
+        }
+      }
+      .a-icon {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        border: 1px #92a0a9 solid;
+        border-radius: 40px;
+        text-align: center;
+        font-size: 14px;
+        box-sizing: border-box;
+        padding-top: 0;
+        margin-right: 10px;
+        cursor: pointer;
+        vertical-align: middle;
+        margin-top: 10px;
+        .fa {
+          display: block;
+          margin-top: 6px;
+          color: #92a0a9;
+        }
+      }
+      .a-weixin {
+        position: relative;
+        display: inline-block;
+      }
+    }
+    li {
+      h2 {
+        font-size: 16px;
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 22px;
+        opacity: .5;
+      }
+      a {
+        color: #fff;
+        opacity: .5;
+        white-space: nowrap;
+        line-height: 36px;
+      }
+    }
+  }
+}
+
+.footer {
+  background: #1a191a;
+  padding: 16px 10px 6px;
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  span {
+    display: inline-block;
+    margin-right: 10px;
+    height: 24px;
+    line-height: 23px;
+  }
+}
