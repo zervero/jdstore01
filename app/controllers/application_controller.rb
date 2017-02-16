@@ -6,7 +6,17 @@ class ApplicationController < ActionController::Base
     @current_cart ||= find_cart
   end
 
+helper_method :navbar_products
+  def navbar_products
+    @navbar_product ||= find_navbar_product
+  end
+
   private
+
+  def find_navbar_product
+    products = Product.all
+    return products
+  end
 
   def find_cart
     cart = Cart.find_by(id: session[:cart_id])
@@ -15,7 +25,7 @@ class ApplicationController < ActionController::Base
     end
 
     session[:cart_id] = cart.id
-    return cart 
+    return cart
   end
 
   def admin_required

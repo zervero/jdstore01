@@ -1,14 +1,14 @@
 <div id="myCarousel" class="carousel slide">
     <ol class="carousel-indicators">
-      <% @products.each do |product| %>
-        <li data-target="#myCarousel" data-slide-to="<%= product.id %>" class="<% if product == @products.first %>
+      <% @welcomeproducts.each do |product| %>
+        <li data-target="#myCarousel" data-slide-to="<%= product.id %>" class="<% if product == @welcomeproducts.first %>
               active
             <% end %>"></li>
       <% end %>
     </ol>
     <div class="carousel-inner">
-      <% @products.each do |product| %>
-        <div class="<% if product == @products.first %>
+      <% @welcomeproducts.each do |product| %>
+        <div class="<% if product == @welcomeproducts.first %>
               item active
             <% else %>
               item

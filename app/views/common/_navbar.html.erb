@@ -8,7 +8,23 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active">
+              <% navbar_products.each do |product| %>
+              <li class="<% if @product == product %>
+              activeitem
+            <% else %>
+              active
+            <% end %>">
+                 <%= link_to product_path(product) do %>
+                  <%= product.title %>
+                  <% end %>
+              </li>
+              <% end %>
+
+                <li class="<% if !@products %>
+              active
+            <% else %>
+              activeitem
+            <% end %>">
                     <%= link_to("Products", products_path) %>
                 </li>
             </ul>
