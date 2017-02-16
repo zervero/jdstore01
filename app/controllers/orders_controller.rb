@@ -44,6 +44,13 @@ class OrdersController < ApplicationController
     redirect_to order_path(@order.token), notice: "Successful pay_with_wechat"
   end
 
+  def apply_to_cancel
+    @order = Order.find(params[:id])
+    OrderMailer.apply_cancel(@order).deliver!
+    flash[:notice] = "Submit cancel order"
+    redirect_to :back
+  end
+
   private
 
   def order_params
