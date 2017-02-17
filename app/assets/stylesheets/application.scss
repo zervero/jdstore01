@@ -19,79 +19,77 @@
 @import "font-awesome";
 
 .content-section {
-  min-height: 800px;
-  background-color: #efefef;
+    min-height: 800px;
+    background-color: #efefef;
 }
 /****** navbar ******/
 .navbar-default {
-
-    background-color: #FFFFFF;//背景颜色
-    border-color: #FFFFFF;//边框色
-    border: 0px;
+    background-color: #FFFFFF; //背景颜色
+    border-color: #FFFFFF; //边框色
+    border: 0;
     //padding: 4px 0px; //内边距 上下 4px ，左右0px
-    margin-bottom: 0;//底部 margin 不撑开距离
+    margin-bottom: 0; //底部 margin 不撑开距离
 }
-
 @media (min-width: 768px) {
     .navbar {
-        border-radius: 0;//圆角为0
+        border-radius: 0; //圆角为0
     }
 }
 
 .navbar-brand > img {
-    display: inline-block;	//图片和链接文字显示在同一行
+    display: inline-block; //图片和链接文字显示在同一行
     margin-right: 10px; //图片和链接文字拉开一点距离
     width: 32px; //定制图片宽度
     height: 32px; //定制图片高度
 }
 
 .navbar-default .navbar-brand {
-
-   color: #00ce96;//字体颜色
-   padding: 10px 200px;//上下10px,左右200px
-   line-height: 30px;//文字行高
-   font-size: 26px;
-
+    color: #00ce96; //字体颜色
+    padding: 10px 200px; //上下10px,左右200px
+    line-height: 30px; //文字行高
+    font-size: 26px;
 }
 
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-  color: #FF6F00;//鼠标放置在链接上的文字颜色
-  background-color: transparent;//鼠标放置在链接上的背景颜色，这里设为透明
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover {
+    color: #FF6F00; //鼠标放置在链接上的文字颜色
+    background-color: transparent; //鼠标放置在链接上的背景颜色，这里设为透明
 }
-
 /****** navbar href ******/
-.navbar-default .navbar-nav > li > a{
-  color: rgba(102,102,102,1.0);
-  line-height: 30px;//文字行高
-  font-size: 15px;
-
+.navbar-default .navbar-nav > li > a {
+    color: rgba(102,102,102,1.0);
+    line-height: 30px; //文字行高
+    font-size: 15px;
 }
 
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #000000;
-  //background-color: rgba(238,0,29,1.0);
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+    color: #000000;
+    //background-color: rgba(238,0,29,1.0);
 }
-.navbar-default .navbar-nav > .active > a{
-  color: rgba(150,150,150,1.0);
-  background-color: transparent;
-  padding: 15px 35px;//上下15px,左右35px
+
+.navbar-default .navbar-nav > .active > a {
+    color: rgba(150,150,150,1.0);
+    background-color: transparent;
+    padding: 15px 35px; //上下15px,左右35px
 }
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #FFFFFF;
-  background-color: #EE001D;
+
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+    color: #FFFFFF;
+    background-color: #EE001D;
 }
-.navbar-default .navbar-nav > .activeitem > a{
-  color: #FFFFFF;
-  background-color: #EE001D;
-  padding: 15px 35px;//上下15px,左右35px
+
+.navbar-default .navbar-nav > .activeitem > a {
+    color: #FFFFFF;
+    background-color: #EE001D;
+    padding: 15px 35px; //上下15px,左右35px
 }
-.navbar-default .navbar-nav > .activeitem > a:hover,
-.navbar-default .navbar-nav > .activeitem > a:focus {
-  color: #FFFFFF;
-  background-color: #EE001D;
+
+.navbar-default .navbar-nav > .activeitem > a:focus,
+.navbar-default .navbar-nav > .activeitem > a:hover {
+    color: #FFFFFF;
+    background-color: #EE001D;
 }
 
 .navbar-default .navbar-nav > .open > a,
@@ -101,114 +99,162 @@
     //color: #212121;
 }
 
-#myCarousel{
-  padding-bottom: 0px;//内部的底部边距，这样按钮不会很靠近底部了
-  margin: 0 -15px 0px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
-  border-radius: 0;//圆角为0
+#myCarousel {
+    padding-bottom: 0; //内部的底部边距，这样按钮不会很靠近底部了
+    margin: 0 -15px; //顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+    border-radius: 0; //圆角为0
 }
+
 .carousel-inner img {
-      width: 100%; /* Set width to 100% */
-      margin: auto;
-      min-height:200px;
-      max-height: 800px;
+    width: 100%;
+    /* Set width to 100% */
+    margin: auto;
+    min-height: 200px;
+    max-height: 800px;
 }
 @media (max-width: 600px) {
     .carousel-caption {
-      display: none;
+        display: none;
     }
-  }
+}
 
-  // footer
-.footer-nav {
-  background: #201f21;
-  padding: 35px 0 20px 0;
-  .columns {
-    max-width: 980px;
-    margin: 0 auto;
-    .column {
-      width: 70px;
-      line-height: 200%;
-      margin: 0 0 10px 25px;
-    }
-    .colum-right {
-      float: right;
-      width: 200px;
-      li {
-        padding: 0;
+.section-content {
+    width: 100%;
+    text-align: left;
+    line-height: 1.8em;
+
+    .col-3 {
+        margin: 0 -15px;
         display: block;
-        white-space: nowrap;
-      }
-      .icon-gamepad {
-        display: inline-block;
-        height: 50px;
-        font-size: 0;
-        margin-right: 50px;
-      }
-      h3 {
-        color: #fff;
-        opacity: .5;
-        margin-top: 0;
-        font-size: 24px;
-      }
-      h4 {
-        .fa {
-          font-size: 18px;
-          margin-right: 10px;
+
+        .item {
+            display: inline;
+            position: relative;
+            top: 0;
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
+
+            .advantage-img {
+                width: 33%;
+            }
+
+            &:hover {
+                position: relative;
+                top: -5px;
+            }
         }
-      }
-      .a-icon {
-        display: inline-block;
-        width: 28px;
-        height: 28px;
-        border: 1px #92a0a9 solid;
-        border-radius: 40px;
-        text-align: center;
-        font-size: 14px;
-        box-sizing: border-box;
-        padding-top: 0;
-        margin-right: 10px;
-        cursor: pointer;
-        vertical-align: middle;
-        margin-top: 10px;
-        .fa {
-          display: block;
-          margin-top: 6px;
-          color: #92a0a9;
+    }
+}
+// footer
+.footer-nav {
+    background: #201f21;
+    padding: 35px 0 20px;
+
+    .columns {
+        max-width: 980px;
+        margin: 0 auto;
+
+        .column {
+            width: 70px;
+            line-height: 200%;
+            margin: 0 0 10px 25px;
         }
-      }
-      .a-weixin {
-        position: relative;
-        display: inline-block;
-      }
+
+        .colum-right {
+            float: right;
+            width: 200px;
+
+            li {
+                padding: 0;
+                display: block;
+                white-space: nowrap;
+            }
+
+            .icon-gamepad {
+                display: inline-block;
+                height: 50px;
+                font-size: 0;
+                margin-right: 50px;
+            }
+
+            h3 {
+                color: #fff;
+                opacity: 0.5;
+                margin-top: 0;
+                font-size: 24px;
+            }
+
+            h4 {
+                .fa {
+                    font-size: 18px;
+                    margin-right: 10px;
+                }
+            }
+
+            .a-icon {
+                display: inline-block;
+                width: 28px;
+                height: 28px;
+                border: 1px #92a0a9 solid;
+                border-radius: 40px;
+                text-align: center;
+                font-size: 14px;
+                box-sizing: border-box;
+                padding-top: 0;
+                margin-right: 10px;
+                cursor: pointer;
+                vertical-align: middle;
+                margin-top: 10px;
+
+                .fa {
+                    display: block;
+                    margin-top: 6px;
+                    color: #92a0a9;
+                }
+            }
+
+            .a-weixin {
+                position: relative;
+                display: inline-block;
+            }
+        }
+
+        li {
+            h2 {
+                font-size: 16px;
+                color: #fff;
+                font-weight: 700;
+                margin-bottom: 22px;
+                opacity: 0.5;
+            }
+
+            a {
+                color: #fff;
+                opacity: 0.5;
+                white-space: nowrap;
+                line-height: 36px;
+            }
+        }
     }
-    li {
-      h2 {
-        font-size: 16px;
-        color: #fff;
-        font-weight: 700;
-        margin-bottom: 22px;
-        opacity: .5;
-      }
-      a {
-        color: #fff;
-        opacity: .5;
-        white-space: nowrap;
-        line-height: 36px;
-      }
-    }
-  }
 }
 
 .footer {
-  background: #1a191a;
-  padding: 16px 10px 6px;
-  text-align: center;
-  font-size: 18px;
-  color: #666;
-  span {
-    display: inline-block;
-    margin-right: 10px;
-    height: 24px;
-    line-height: 23px;
-  }
+    background: #ffffff;
+    padding: 16px 10px 6px;
+    text-align: center;
+    font-size: 12px;
+    color: #969696;
+
+    span {
+        display: inline-block;
+        margin-right: 10px;
+        height: 24px;
+        line-height: 23px;
+    }
+
+    a {
+        color: #969696;
+        //white-space: nowrap;
+        line-height: 36px;
+    }
 }

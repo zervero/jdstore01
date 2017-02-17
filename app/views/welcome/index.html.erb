@@ -1,28 +1,28 @@
 <div id="myCarousel" class="carousel slide">
     <ol class="carousel-indicators">
-      <% @welcomeproducts.each do |product| %>
+        <% @welcomeproducts.each do |product| %>
         <li data-target="#myCarousel" data-slide-to="<%= product.id %>" class="<% if product == @welcomeproducts.first %>
               active
             <% end %>"></li>
-      <% end %>
+        <% end %>
     </ol>
     <div class="carousel-inner">
-      <% @welcomeproducts.each do |product| %>
+        <% @welcomeproducts.each do |product| %>
         <div class="<% if product == @welcomeproducts.first %>
               item active
             <% else %>
               item
             <% end %>">
-          <%= link_to product_path(product) do %>
+            <%= link_to product_path(product) do %>
             <% if product.image.present? %>
-              <%= image_tag(product.image.url) %>
-            <% else %>
-              <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+            <%= image_tag(product.image.url) %>
+        <% else %>
+            <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
             <% end %>
             <div class="carousel-caption"></div>
-          <% end %>
+            <% end %>
         </div>
-      <% end %>
+        <% end %>
     </div>
     <a class="carousel-control left" href="#myCarousel" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -31,3 +31,21 @@
         <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
 </div>
+
+<section class="odd">
+    <div class="section-content">
+        <div class="col-3 clearfix advantage">
+            <% @welcomeproducts.each do |product| %>
+            <div class="item fl">
+                <%= link_to product_path(product) do %>
+                <% if product.image.present? %>
+                <%= image_tag(product.image.thumb.url, class: "advantage-img") %>
+            <% else %>
+                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "advantage-img") %>
+                <% end %>
+                <% end %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</section>
