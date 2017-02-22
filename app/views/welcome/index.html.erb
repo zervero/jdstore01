@@ -35,11 +35,11 @@
 <section class="odd">
     <div class="section-content">
         <div class="col-3 clearfix advantage">
-            <% @welcomeproducts.each do |product| %>
+            <% @recommendproducts.each do |product| %>
             <div class="item fl">
                 <%= link_to product_path(product) do %>
                 <% if product.image.present? %>
-                <%= image_tag(product.image.thumb.url, class: "advantage-img") %>
+                <%= image_tag(product.image.url, class: "advantage-img") %>
             <% else %>
                 <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "advantage-img") %>
                 <% end %>

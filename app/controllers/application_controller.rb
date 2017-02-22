@@ -14,7 +14,7 @@ helper_method :navbar_products
   private
 
   def find_navbar_product
-    products = Product.all
+    products = Product.where(:product_category_id => 1)
     return products
   end
 
